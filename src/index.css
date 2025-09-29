@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-dark: #090c13;
   --color-light: #e5e7eb;
@@ -13,7 +17,7 @@
   }
 
   .light {
-    @apply bg-light text-black;
+    @apply bg-white text-black;
   }
 }
 
