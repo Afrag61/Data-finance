@@ -3,6 +3,7 @@ import type { TThemeContext } from './../types';
 import { useTheme } from '../hooks/useTheme';
 
 const initialState: TThemeContext = {
+  classes: 'ease-in-out duration-500 ',
   theme: 'dark',
   toggleTheme: () => {},
 };
@@ -16,10 +17,10 @@ interface Props {
 }
 
 export const ThemeContextProvider: React.FC<Props> = ({ children }) => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, classes, toggleTheme } = useTheme();
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, classes }}>
       {children}
     </ThemeContext.Provider>
   );

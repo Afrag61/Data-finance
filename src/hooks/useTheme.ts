@@ -12,10 +12,10 @@ const getTheme = (): TThemeContext['theme'] => {
 export const useTheme = () => {
   const [theme, setTheme] = useState<TThemeContext['theme']>(getTheme);
 
-  const classes = `${theme} ease-in-out duration-500 `;
+  const classes = `ease-in-out duration-500 `;
 
   useEffect(() => {
-    document.body.className = classes;
+    document.body.className = `${theme} ${classes}`;
     localStorage.setItem('theme', theme);
   }, [theme]);
 
@@ -23,5 +23,5 @@ export const useTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  return { theme, toggleTheme };
+  return { classes, theme, toggleTheme };
 };
