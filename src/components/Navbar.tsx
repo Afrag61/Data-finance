@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto'>
-      <h1 className='w-1/2 text-3xl font-bold text-primary'>REACT.</h1>
+      <h1 className='w-1/2 px-4 text-3xl font-bold text-primary'>REACT.</h1>
       <ul className='hidden md:flex font-semibold'>
         <li className='p-4'>Home</li>
         <li className='p-4'>Company</li>
@@ -31,7 +31,9 @@ const Navbar = () => {
       <div
         className={
           isOpen
-            ? `bg-${theme} fixed left-0 top-0 w-[60%] border-r border-r-primary light:border-secondary h-full ease-in-out duration-500 `
+            ? `${
+                theme === 'dark' ? 'bg-dark' : 'bg-gray-300'
+              } fixed left-0 top-0 w-[60%] border-r border-r-primary light:border-secondary h-full ease-in-out duration-500 `
             : 'fixed left-[-100%] ease-in-out duration-500'
         }
       >
