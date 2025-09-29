@@ -33,22 +33,22 @@ const Navbar = () => {
           isOpen
             ? `${
                 theme === 'dark' ? 'bg-dark' : 'bg-gray-300'
-              } fixed left-0 top-0 w-[60%] border-r border-r-primary light:border-secondary h-full ease-in-out duration-500 `
+              } fixed left-0 top-0 w-[60%] border-r border-r-primary light:border-dark h-full bg-transparent backdrop-blur-xl ease-in-out duration-500 `
             : 'fixed left-[-100%] ease-in-out duration-500'
         }
       >
         <h1 className='w-full text-3xl font-bold text-primary m-4'>REACT.</h1>
         <ul className='uppercase p-4 font-semibold'>
-          <li className='p-4 border-b border-primary light:border-secondary'>
+          <li className='p-4 border-b border-primary light:border-dark'>
             Home
           </li>
-          <li className='p-4 border-b border-primary light:border-secondary'>
+          <li className='p-4 border-b border-primary light:border-dark'>
             Company
           </li>
-          <li className='p-4 border-b border-primary light:border-secondary'>
+          <li className='p-4 border-b border-primary light:border-dark'>
             Resources
           </li>
-          <li className='p-4 border-b border-primary light:border-secondary'>
+          <li className='p-4 border-b border-primary light:border-dark'>
             About
           </li>
           <li className='p-4'>Contact</li>
