@@ -16,6 +16,11 @@ export const useTheme = () => {
 
   useEffect(() => {
     document.body.className = `${theme} ${classes}`;
+    window.onkeydown = (e) => {
+      if (e.key === '`') {
+        toggleTheme();
+      }
+    };
     localStorage.setItem('theme', theme);
   }, [theme]);
 
