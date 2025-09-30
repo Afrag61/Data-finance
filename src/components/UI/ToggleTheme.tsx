@@ -9,7 +9,7 @@ const ToggleTheme: React.FC<Props> = ({ className, ...props }) => {
   return (
     <button
       onClick={toggleTheme}
-      className={`fixed bottom-0 right-0 m-6 text-sm md:text-base light:bg-dark light:text-light dark:bg-light dark:text-dark  p-2 rounded-full font-semibold hover:cursor-pointer hover:scale-105 focus:outline-none ${classes} ${className}`}
+      className={`fixed bottom-0 right-0 z-50 m-6 text-sm md:text-base light:bg-dark light:text-light dark:bg-light dark:text-dark  p-2 rounded-full font-semibold hover:cursor-pointer hover:scale-105 focus:outline-none ${classes} ${className}`}
       {...props}
     >
       {theme === 'light' ? (
