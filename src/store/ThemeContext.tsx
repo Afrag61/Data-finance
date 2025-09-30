@@ -6,6 +6,7 @@ const initialState: TThemeContext = {
   classes: 'ease-in-out duration-500 ',
   theme: 'dark',
   toggleTheme: () => {},
+  scrollToTop: () => {},
 };
 
 const ThemeContext = createContext(initialState);
@@ -17,10 +18,10 @@ interface Props {
 }
 
 export const ThemeContextProvider: React.FC<Props> = ({ children }) => {
-  const { theme, classes, toggleTheme } = useTheme();
+  const { theme, classes, toggleTheme, scrollToTop } = useTheme();
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, classes }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, classes, scrollToTop }}>
       {children}
     </ThemeContext.Provider>
   );

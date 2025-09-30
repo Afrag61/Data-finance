@@ -23,5 +23,9 @@ export const useTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  return { classes, theme, toggleTheme };
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return { classes, theme, toggleTheme, scrollToTop: handleScrollToTop };
 };
